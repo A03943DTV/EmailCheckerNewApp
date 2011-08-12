@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>emailCheckerServlet</servlet-name>
+		<servlet-class>com.directv.emailchecker.app.server.EmailCheckerServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>emailCheckerServlet</servlet-name>
+		<url-pattern>/emailcheckerapp/emailchecker</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>userBulkUploadHandlerServlet</servlet-name>
+		<servlet-class>com.directv.emailchecker.app.server.upload.BulkUploadHandlerServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>userBulkUploadHandlerServlet</servlet-name>
+		<url-pattern>/userBulkUpload</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>bulkUploadServlet</servlet-name>
+		<servlet-class>com.directv.emailchecker.app.server.BulkUploadServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>bulkUploadServlet</servlet-name>
+		<url-pattern>/emailcheckerapp/bulkUpload</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>buDownloadServlet</servlet-name>
+		<servlet-class>com.directv.emailchecker.app.server.export.BulkUploadDownloadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>buDownloadServlet</servlet-name>
+		<url-pattern>/emailcheckerapp/buDownloadServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>EmailCheckerApp.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

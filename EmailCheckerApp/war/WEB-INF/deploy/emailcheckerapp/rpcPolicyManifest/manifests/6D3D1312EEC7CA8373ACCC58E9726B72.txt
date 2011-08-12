@@ -1,0 +1,2 @@
+serviceClass: com.directv.emailchecker.app.client.EmailCheckerService
+path: 4BCFB2982113F162ACFD665EC06B106D.gwt.rpc
